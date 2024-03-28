@@ -1,0 +1,1387 @@
+{
+    "plays": [
+        {
+            "___progress": "75%",
+            "__changed": 1,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 1,
+            "__ok": 3,
+            "__percent_complete": 75,
+            "__play_name": "Weather forecast",
+            "__progress": "▇▇▇▇▇▇  ",
+            "__skipped": 0,
+            "__task_count": 4,
+            "__unreachable": 0,
+            "name": "Weather forecast",
+            "pattern": "localhost",
+            "play": "Weather forecast",
+            "play_pattern": "localhost",
+            "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+            "playbook": "/home/bthornto/github/weather_demo/site.yml",
+            "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Ensure the airport code has been defined",
+                    "__task_action": "ansible.builtin.assert",
+                    "duration": 0.01527,
+                    "end": "2024-03-28T16:42:14.366913",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "_ansible_verbose_always": true,
+                        "changed": false,
+                        "msg": "All assertions passed"
+                    },
+                    "resolved_action": "ansible.builtin.assert",
+                    "start": "2024-03-28T16:42:14.351643",
+                    "task": "Ensure the airport code has been defined",
+                    "task_action": "ansible.builtin.assert",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/site.yml:5",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000003",
+                    "uuid": "f347ac7e-278e-4e40-8ec2-d9be00bba927"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 1,
+                    "__result": "Ok",
+                    "__task": "Check the weather",
+                    "__task_action": "ansible.builtin.include_role",
+                    "duration": 0.007451,
+                    "end": "2024-03-28T16:42:14.377166",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "changed": false,
+                        "include_args": {
+                            "name": "weather.demo.run"
+                        }
+                    },
+                    "resolved_action": null,
+                    "start": "2024-03-28T16:42:14.369715",
+                    "task": "Check the weather",
+                    "task_action": "ansible.builtin.include_role",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/site.yml:10",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000004",
+                    "uuid": "06a2adee-39c3-42b9-9b48-10cd9905c32b"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "2s",
+                    "__host": "localhost",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Clone the latitude longtude repo locally",
+                    "__task_action": "ansible.scm.git_retrieve",
+                    "duration": 1.52835,
+                    "end": "2024-03-28T16:42:15.965919",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "branch_name": "ansible-weather_forecast-2024-03-28T094215.958712-0700",
+                        "branches": [
+                            "master",
+                            "master",
+                            "master"
+                        ],
+                        "changed": true,
+                        "msg": "Successfully retrieved repository: https://github.com/ip2location/ip2location-iata-icao",
+                        "name": "ip2location-iata-icao",
+                        "output": [
+                            {
+                                "command": "git -C /tmp/tmpmnrzomxq clone --depth=1 --progress --no-single-branch https://github.com/ip2location/ip2location-iata-icao",
+                                "env": "",
+                                "return_code": 0,
+                                "stderr_lines": [
+                                    "Cloning into 'ip2location-iata-icao'...",
+                                    "remote: Enumerating objects: 40, done.        ",
+                                    "remote: Counting objects:   2% (1/40)        ",
+                                    "remote: Counting objects:   5% (2/40)        ",
+                                    "remote: Counting objects:   7% (3/40)        ",
+                                    "remote: Counting objects:  10% (4/40)        ",
+                                    "remote: Counting objects:  12% (5/40)        ",
+                                    "remote: Counting objects:  15% (6/40)        ",
+                                    "remote: Counting objects:  17% (7/40)        ",
+                                    "remote: Counting objects:  20% (8/40)        ",
+                                    "remote: Counting objects:  22% (9/40)        ",
+                                    "remote: Counting objects:  25% (10/40)        ",
+                                    "remote: Counting objects:  27% (11/40)        ",
+                                    "remote: Counting objects:  30% (12/40)        ",
+                                    "remote: Counting objects:  32% (13/40)        ",
+                                    "remote: Counting objects:  35% (14/40)        ",
+                                    "remote: Counting objects:  37% (15/40)        ",
+                                    "remote: Counting objects:  40% (16/40)        ",
+                                    "remote: Counting objects:  42% (17/40)        ",
+                                    "remote: Counting objects:  45% (18/40)        ",
+                                    "remote: Counting objects:  47% (19/40)        ",
+                                    "remote: Counting objects:  50% (20/40)        ",
+                                    "remote: Counting objects:  52% (21/40)        ",
+                                    "remote: Counting objects:  55% (22/40)        ",
+                                    "remote: Counting objects:  57% (23/40)        ",
+                                    "remote: Counting objects:  60% (24/40)        ",
+                                    "remote: Counting objects:  62% (25/40)        ",
+                                    "remote: Counting objects:  65% (26/40)        ",
+                                    "remote: Counting objects:  67% (27/40)        ",
+                                    "remote: Counting objects:  70% (28/40)        ",
+                                    "remote: Counting objects:  72% (29/40)        ",
+                                    "remote: Counting objects:  75% (30/40)        ",
+                                    "remote: Counting objects:  77% (31/40)        ",
+                                    "remote: Counting objects:  80% (32/40)        ",
+                                    "remote: Counting objects:  82% (33/40)        ",
+                                    "remote: Counting objects:  85% (34/40)        ",
+                                    "remote: Counting objects:  87% (35/40)        ",
+                                    "remote: Counting objects:  90% (36/40)        ",
+                                    "remote: Counting objects:  92% (37/40)        ",
+                                    "remote: Counting objects:  95% (38/40)        ",
+                                    "remote: Counting objects:  97% (39/40)        ",
+                                    "remote: Counting objects: 100% (40/40)        ",
+                                    "remote: Counting objects: 100% (40/40), done.        ",
+                                    "remote: Compressing objects:   2% (1/34)        ",
+                                    "remote: Compressing objects:   5% (2/34)        ",
+                                    "remote: Compressing objects:   8% (3/34)        ",
+                                    "remote: Compressing objects:  11% (4/34)        ",
+                                    "remote: Compressing objects:  14% (5/34)        ",
+                                    "remote: Compressing objects:  17% (6/34)        ",
+                                    "remote: Compressing objects:  20% (7/34)        ",
+                                    "remote: Compressing objects:  23% (8/34)        ",
+                                    "remote: Compressing objects:  26% (9/34)        ",
+                                    "remote: Compressing objects:  29% (10/34)        ",
+                                    "remote: Compressing objects:  32% (11/34)        ",
+                                    "remote: Compressing objects:  35% (12/34)        ",
+                                    "remote: Compressing objects:  38% (13/34)        ",
+                                    "remote: Compressing objects:  41% (14/34)        ",
+                                    "remote: Compressing objects:  44% (15/34)        ",
+                                    "remote: Compressing objects:  47% (16/34)        ",
+                                    "remote: Compressing objects:  50% (17/34)        ",
+                                    "remote: Compressing objects:  52% (18/34)        ",
+                                    "remote: Compressing objects:  55% (19/34)        ",
+                                    "remote: Compressing objects:  58% (20/34)        ",
+                                    "remote: Compressing objects:  61% (21/34)        ",
+                                    "remote: Compressing objects:  64% (22/34)        ",
+                                    "remote: Compressing objects:  67% (23/34)        ",
+                                    "remote: Compressing objects:  70% (24/34)        ",
+                                    "remote: Compressing objects:  73% (25/34)        ",
+                                    "remote: Compressing objects:  76% (26/34)        ",
+                                    "remote: Compressing objects:  79% (27/34)        ",
+                                    "remote: Compressing objects:  82% (28/34)        ",
+                                    "remote: Compressing objects:  85% (29/34)        ",
+                                    "remote: Compressing objects:  88% (30/34)        ",
+                                    "remote: Compressing objects:  91% (31/34)        ",
+                                    "remote: Compressing objects:  94% (32/34)        ",
+                                    "remote: Compressing objects:  97% (33/34)        ",
+                                    "remote: Compressing objects: 100% (34/34)        ",
+                                    "remote: Compressing objects: 100% (34/34), done.        ",
+                                    "Receiving objects:   2% (1/40)",
+                                    "Receiving objects:   5% (2/40)",
+                                    "Receiving objects:   7% (3/40)",
+                                    "Receiving objects:  10% (4/40)",
+                                    "Receiving objects:  12% (5/40)",
+                                    "Receiving objects:  15% (6/40)",
+                                    "Receiving objects:  17% (7/40)",
+                                    "Receiving objects:  20% (8/40)",
+                                    "Receiving objects:  22% (9/40)",
+                                    "Receiving objects:  25% (10/40)",
+                                    "Receiving objects:  27% (11/40)",
+                                    "Receiving objects:  30% (12/40)",
+                                    "Receiving objects:  32% (13/40)",
+                                    "Receiving objects:  35% (14/40)",
+                                    "Receiving objects:  37% (15/40)",
+                                    "Receiving objects:  40% (16/40)",
+                                    "Receiving objects:  42% (17/40)",
+                                    "Receiving objects:  45% (18/40)",
+                                    "Receiving objects:  47% (19/40)",
+                                    "Receiving objects:  50% (20/40)",
+                                    "Receiving objects:  52% (21/40)",
+                                    "Receiving objects:  55% (22/40)",
+                                    "Receiving objects:  57% (23/40)",
+                                    "Receiving objects:  60% (24/40)",
+                                    "Receiving objects:  62% (25/40)",
+                                    "Receiving objects:  65% (26/40)",
+                                    "Receiving objects:  67% (27/40)",
+                                    "Receiving objects:  70% (28/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  72% (29/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  75% (30/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  77% (31/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  80% (32/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  82% (33/40), 188.00 KiB | 357.00 KiB/s",
+                                    "remote: Total 40 (delta 12), reused 27 (delta 6), pack-reused 0        ",
+                                    "Receiving objects:  85% (34/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  87% (35/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  90% (36/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  92% (37/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  95% (38/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects:  97% (39/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects: 100% (40/40), 188.00 KiB | 357.00 KiB/s",
+                                    "Receiving objects: 100% (40/40), 324.73 KiB | 429.00 KiB/s, done.",
+                                    "Resolving deltas:   0% (0/12)",
+                                    "Resolving deltas:   8% (1/12)",
+                                    "Resolving deltas:  16% (2/12)",
+                                    "Resolving deltas:  25% (3/12)",
+                                    "Resolving deltas:  33% (4/12)",
+                                    "Resolving deltas:  41% (5/12)",
+                                    "Resolving deltas:  50% (6/12)",
+                                    "Resolving deltas:  58% (7/12)",
+                                    "Resolving deltas:  66% (8/12)",
+                                    "Resolving deltas:  75% (9/12)",
+                                    "Resolving deltas:  83% (10/12)",
+                                    "Resolving deltas:  91% (11/12)",
+                                    "Resolving deltas: 100% (12/12)",
+                                    "Resolving deltas: 100% (12/12), done."
+                                ],
+                                "stdout_lines": []
+                            },
+                            {
+                                "command": "git -C /tmp/tmpmnrzomxq/ip2location-iata-icao branch -a",
+                                "env": "",
+                                "return_code": 0,
+                                "stderr_lines": [],
+                                "stdout_lines": [
+                                    "* master",
+                                    "  remotes/origin/HEAD -> origin/master",
+                                    "  remotes/origin/master"
+                                ]
+                            },
+                            {
+                                "command": "git -C /tmp/tmpmnrzomxq/ip2location-iata-icao checkout -t -b ansible-weather_forecast-2024-03-28T094215.958712-0700",
+                                "env": "",
+                                "return_code": 0,
+                                "stderr_lines": [
+                                    "Switched to a new branch 'ansible-weather_forecast-2024-03-28T094215.958712-0700'"
+                                ],
+                                "stdout_lines": [
+                                    "branch 'ansible-weather_forecast-2024-03-28T094215.958712-0700' set up to track 'master'."
+                                ]
+                            }
+                        ],
+                        "path": "/tmp/tmpmnrzomxq/ip2location-iata-icao"
+                    },
+                    "resolved_action": "ansible.scm.git_retrieve",
+                    "resolved_role": "weather.demo.run",
+                    "role": "run",
+                    "start": "2024-03-28T16:42:14.437569",
+                    "task": "Clone the latitude longtude repo locally",
+                    "task_action": "ansible.scm.git_retrieve",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/collections/ansible_collections/weather/demo/roles/run/tasks/main.yml:1",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000023",
+                    "uuid": "b88a241d-0924-40bc-bc92-bf41441db15a"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "localhost",
+                    "__number": 3,
+                    "__result": "Ok",
+                    "__task": "Convert the CSV to structured data",
+                    "__task_action": "community.general.read_csv",
+                    "duration": 1.346197,
+                    "end": "2024-03-28T16:42:17.315409",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {},
+                    "resolved_action": "community.general.read_csv",
+                    "resolved_role": "weather.demo.run",
+                    "role": "run",
+                    "start": "2024-03-28T16:42:15.969212",
+                    "task": "Convert the CSV to structured data",
+                    "task_action": "community.general.read_csv",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/collections/ansible_collections/weather/demo/roles/run/tasks/main.yml:7",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000024",
+                    "uuid": "d62a2727-f277-4df1-a611-1accc5f8f065"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 4,
+                    "__result": "Ok",
+                    "__task": "Extract the matching airport from the list of all airports",
+                    "__task_action": "ansible.builtin.set_fact",
+                    "duration": 0.089688,
+                    "end": "2024-03-28T16:42:17.584308",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "airport_details": {
+                                "airport": "Raleigh-Durham International Airport",
+                                "country_code": "US",
+                                "iata": "RDU",
+                                "icao": "KRDU",
+                                "latitude": "35.8776",
+                                "longitude": "-78.7875",
+                                "region_name": "North Carolina"
+                            }
+                        },
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.set_fact",
+                    "resolved_role": "weather.demo.run",
+                    "role": "run",
+                    "start": "2024-03-28T16:42:17.494620",
+                    "task": "Extract the matching airport from the list of all airports",
+                    "task_action": "ansible.builtin.set_fact",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/collections/ansible_collections/weather/demo/roles/run/tasks/main.yml:12",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000025",
+                    "uuid": "db99f69b-4eae-4c31-8b99-3e16bb9c3cc2"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "localhost",
+                    "__number": 5,
+                    "__result": "Ok",
+                    "__task": "Retrieve weather information using the latitude and longitude",
+                    "__task_action": "ansible.builtin.uri",
+                    "duration": 0.829615,
+                    "end": "2024-03-28T16:42:18.423996",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "access_control_allow_origin": "*",
+                        "access_control_expose_headers": "X-Correlation-Id, X-Request-Id, X-Server-Id",
+                        "cache_control": "public, max-age=29936, s-maxage=120",
+                        "changed": false,
+                        "connection": "close",
+                        "content_length": "3103",
+                        "content_type": "application/geo+json",
+                        "cookies": {},
+                        "cookies_string": "",
+                        "date": "Thu, 28 Mar 2024 16:42:18 GMT",
+                        "elapsed": 0,
+                        "expires": "Fri, 29 Mar 2024 01:01:14 GMT",
+                        "invocation": {
+                            "module_args": {
+                                "attributes": null,
+                                "body": null,
+                                "body_format": "raw",
+                                "ca_path": null,
+                                "ciphers": null,
+                                "client_cert": null,
+                                "client_key": null,
+                                "creates": null,
+                                "decompress": true,
+                                "dest": null,
+                                "follow_redirects": "safe",
+                                "force": false,
+                                "force_basic_auth": false,
+                                "group": null,
+                                "headers": {},
+                                "http_agent": "ansible-httpget",
+                                "method": "GET",
+                                "mode": null,
+                                "owner": null,
+                                "remote_src": false,
+                                "removes": null,
+                                "return_content": false,
+                                "selevel": null,
+                                "serole": null,
+                                "setype": null,
+                                "seuser": null,
+                                "src": null,
+                                "status_code": [
+                                    200
+                                ],
+                                "timeout": 30,
+                                "unix_socket": null,
+                                "unredirected_headers": [],
+                                "unsafe_writes": false,
+                                "url": "https://api.weather.gov/points/35.8776,-78.7875",
+                                "url_password": null,
+                                "url_username": null,
+                                "use_gssapi": false,
+                                "use_netrc": true,
+                                "use_proxy": true,
+                                "validate_certs": true
+                            }
+                        },
+                        "json": {
+                            "@context": [
+                                "https://geojson.org/geojson-ld/geojson-context.jsonld",
+                                {
+                                    "@version": "1.1",
+                                    "@vocab": "https://api.weather.gov/ontology#",
+                                    "bearing": {
+                                        "@type": "s:QuantitativeValue"
+                                    },
+                                    "city": "s:addressLocality",
+                                    "county": {
+                                        "@type": "@id"
+                                    },
+                                    "distance": {
+                                        "@id": "s:Distance",
+                                        "@type": "s:QuantitativeValue"
+                                    },
+                                    "forecastGridData": {
+                                        "@type": "@id"
+                                    },
+                                    "forecastOffice": {
+                                        "@type": "@id"
+                                    },
+                                    "geo": "http://www.opengis.net/ont/geosparql#",
+                                    "geometry": {
+                                        "@id": "s:GeoCoordinates",
+                                        "@type": "geo:wktLiteral"
+                                    },
+                                    "publicZone": {
+                                        "@type": "@id"
+                                    },
+                                    "s": "https://schema.org/",
+                                    "state": "s:addressRegion",
+                                    "unit": "http://codes.wmo.int/common/unit/",
+                                    "unitCode": {
+                                        "@id": "s:unitCode",
+                                        "@type": "@id"
+                                    },
+                                    "value": {
+                                        "@id": "s:value"
+                                    },
+                                    "wx": "https://api.weather.gov/ontology#"
+                                }
+                            ],
+                            "geometry": {
+                                "coordinates": [
+                                    -78.7875,
+                                    35.8776
+                                ],
+                                "type": "Point"
+                            },
+                            "id": "https://api.weather.gov/points/35.8776,-78.7875",
+                            "properties": {
+                                "@id": "https://api.weather.gov/points/35.8776,-78.7875",
+                                "@type": "wx:Point",
+                                "county": "https://api.weather.gov/zones/county/NCC183",
+                                "cwa": "RAH",
+                                "fireWeatherZone": "https://api.weather.gov/zones/fire/NCZ041",
+                                "forecast": "https://api.weather.gov/gridpoints/RAH/69,61/forecast",
+                                "forecastGridData": "https://api.weather.gov/gridpoints/RAH/69,61",
+                                "forecastHourly": "https://api.weather.gov/gridpoints/RAH/69,61/forecast/hourly",
+                                "forecastOffice": "https://api.weather.gov/offices/RAH",
+                                "forecastZone": "https://api.weather.gov/zones/forecast/NCZ041",
+                                "gridId": "RAH",
+                                "gridX": 69,
+                                "gridY": 61,
+                                "observationStations": "https://api.weather.gov/gridpoints/RAH/69,61/stations",
+                                "radarStation": "KRAX",
+                                "relativeLocation": {
+                                    "geometry": {
+                                        "coordinates": [
+                                            -78.840821,
+                                            35.834444
+                                        ],
+                                        "type": "Point"
+                                    },
+                                    "properties": {
+                                        "bearing": {
+                                            "unitCode": "wmoUnit:degree_(angle)",
+                                            "value": 45
+                                        },
+                                        "city": "Morrisville",
+                                        "distance": {
+                                            "unitCode": "wmoUnit:m",
+                                            "value": 6791.1721683224
+                                        },
+                                        "state": "NC"
+                                    },
+                                    "type": "Feature"
+                                },
+                                "timeZone": "America/New_York"
+                            },
+                            "type": "Feature"
+                        },
+                        "msg": "OK (3103 bytes)",
+                        "redirected": false,
+                        "server": "nginx/1.20.1",
+                        "status": 200,
+                        "strict_transport_security": "max-age=31536000 ; includeSubDomains ; preload",
+                        "url": "https://api.weather.gov/points/35.8776,-78.7875",
+                        "vary": "Accept-Encoding, Accept,Feature-Flags,Accept-Language",
+                        "x_correlation_id": "81a2b901",
+                        "x_edge_request_id": "1121eb8c",
+                        "x_request_id": "64479939-8e9e-4c37-9fc2-19912cde58e6",
+                        "x_server_id": "vm-lnx-nids-apiapp4.ncep.noaa.gov"
+                    },
+                    "resolved_action": "ansible.builtin.uri",
+                    "resolved_role": "weather.demo.run",
+                    "role": "run",
+                    "start": "2024-03-28T16:42:17.594381",
+                    "task": "Retrieve weather information using the latitude and longitude",
+                    "task_action": "ansible.builtin.uri",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/collections/ansible_collections/weather/demo/roles/run/tasks/main.yml:16",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000026",
+                    "uuid": "50ca044f-618f-47e6-83b0-80297923163b"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 6,
+                    "__result": "Ok",
+                    "__task": "Get the URL for the forecast",
+                    "__task_action": "ansible.builtin.set_fact",
+                    "duration": 0.016459,
+                    "end": "2024-03-28T16:42:18.444011",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "forecast_url": "https://api.weather.gov/gridpoints/RAH/69,61/forecast"
+                        },
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.set_fact",
+                    "resolved_role": "weather.demo.run",
+                    "role": "run",
+                    "start": "2024-03-28T16:42:18.427552",
+                    "task": "Get the URL for the forecast",
+                    "task_action": "ansible.builtin.set_fact",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/collections/ansible_collections/weather/demo/roles/run/tasks/main.yml:23",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000027",
+                    "uuid": "36fbd5e7-54fd-436d-9311-730aef3801c2"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "localhost",
+                    "__number": 7,
+                    "__result": "Ok",
+                    "__task": "Retrieve the current forecast",
+                    "__task_action": "ansible.builtin.uri",
+                    "duration": 0.595588,
+                    "end": "2024-03-28T16:42:19.042930",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "access_control_allow_origin": "*",
+                        "access_control_expose_headers": "X-Correlation-Id, X-Request-Id, X-Server-Id",
+                        "cache_control": "public, max-age=1132, s-maxage=3600",
+                        "changed": false,
+                        "connection": "close",
+                        "content_length": "17679",
+                        "content_type": "application/geo+json",
+                        "cookies": {},
+                        "cookies_string": "",
+                        "date": "Thu, 28 Mar 2024 16:42:18 GMT",
+                        "elapsed": 0,
+                        "expires": "Thu, 28 Mar 2024 17:01:10 GMT",
+                        "invocation": {
+                            "module_args": {
+                                "attributes": null,
+                                "body": null,
+                                "body_format": "raw",
+                                "ca_path": null,
+                                "ciphers": null,
+                                "client_cert": null,
+                                "client_key": null,
+                                "creates": null,
+                                "decompress": true,
+                                "dest": null,
+                                "follow_redirects": "safe",
+                                "force": false,
+                                "force_basic_auth": false,
+                                "group": null,
+                                "headers": {},
+                                "http_agent": "ansible-httpget",
+                                "method": "GET",
+                                "mode": null,
+                                "owner": null,
+                                "remote_src": false,
+                                "removes": null,
+                                "return_content": false,
+                                "selevel": null,
+                                "serole": null,
+                                "setype": null,
+                                "seuser": null,
+                                "src": null,
+                                "status_code": [
+                                    200
+                                ],
+                                "timeout": 30,
+                                "unix_socket": null,
+                                "unredirected_headers": [],
+                                "unsafe_writes": false,
+                                "url": "https://api.weather.gov/gridpoints/RAH/69,61/forecast",
+                                "url_password": null,
+                                "url_username": null,
+                                "use_gssapi": false,
+                                "use_netrc": true,
+                                "use_proxy": true,
+                                "validate_certs": true
+                            }
+                        },
+                        "json": {
+                            "@context": [
+                                "https://geojson.org/geojson-ld/geojson-context.jsonld",
+                                {
+                                    "@version": "1.1",
+                                    "@vocab": "https://api.weather.gov/ontology#",
+                                    "geo": "http://www.opengis.net/ont/geosparql#",
+                                    "unit": "http://codes.wmo.int/common/unit/",
+                                    "wx": "https://api.weather.gov/ontology#"
+                                }
+                            ],
+                            "geometry": {
+                                "coordinates": [
+                                    [
+                                        [
+                                            -78.7901904,
+                                            35.8874218
+                                        ],
+                                        [
+                                            -78.7934892,
+                                            35.8651704
+                                        ],
+                                        [
+                                            -78.7660207,
+                                            35.862494299999994
+                                        ],
+                                        [
+                                            -78.7627165,
+                                            35.88474539999999
+                                        ],
+                                        [
+                                            -78.7901904,
+                                            35.8874218
+                                        ]
+                                    ]
+                                ],
+                                "type": "Polygon"
+                            },
+                            "properties": {
+                                "elevation": {
+                                    "unitCode": "wmoUnit:m",
+                                    "value": 121.92
+                                },
+                                "forecastGenerator": "BaselineForecastGenerator",
+                                "generatedAt": "2024-03-28T15:59:34+00:00",
+                                "periods": [
+                                    {
+                                        "detailedForecast": "Rain likely before 5pm. Cloudy, with a high near 55. North wind around 13 mph, with gusts as high as 24 mph. Chance of precipitation is 60%. New rainfall amounts between a quarter and half of an inch possible.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 9.444444444444445
+                                        },
+                                        "endTime": "2024-03-28T18:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/day/rain,50/rain,60?size=medium",
+                                        "isDaytime": true,
+                                        "name": "Today",
+                                        "number": 1,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 60
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 93
+                                        },
+                                        "shortForecast": "Light Rain Likely",
+                                        "startTime": "2024-03-28T11:00:00-04:00",
+                                        "temperature": 55,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "N",
+                                        "windSpeed": "13 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "Mostly clear, with a low around 37. Northwest wind 2 to 8 mph. New rainfall amounts less than a tenth of an inch possible.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 8.333333333333334
+                                        },
+                                        "endTime": "2024-03-29T06:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                                        "isDaytime": false,
+                                        "name": "Tonight",
+                                        "number": 2,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 80
+                                        },
+                                        "shortForecast": "Mostly Clear",
+                                        "startTime": "2024-03-28T18:00:00-04:00",
+                                        "temperature": 37,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "NW",
+                                        "windSpeed": "2 to 8 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "Sunny, with a high near 68. West wind 3 to 17 mph, with gusts as high as 28 mph.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 3.888888888888889
+                                        },
+                                        "endTime": "2024-03-29T18:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                                        "isDaytime": true,
+                                        "name": "Friday",
+                                        "number": 3,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 76
+                                        },
+                                        "shortForecast": "Sunny",
+                                        "startTime": "2024-03-29T06:00:00-04:00",
+                                        "temperature": 68,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "W",
+                                        "windSpeed": "3 to 17 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "Mostly clear, with a low around 47. West wind 6 to 13 mph.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 5
+                                        },
+                                        "endTime": "2024-03-30T06:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                                        "isDaytime": false,
+                                        "name": "Friday Night",
+                                        "number": 4,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 68
+                                        },
+                                        "shortForecast": "Mostly Clear",
+                                        "startTime": "2024-03-29T18:00:00-04:00",
+                                        "temperature": 47,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "W",
+                                        "windSpeed": "6 to 13 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "Sunny, with a high near 75. Southwest wind 5 to 14 mph, with gusts as high as 23 mph.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 8.333333333333334
+                                        },
+                                        "endTime": "2024-03-30T18:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                                        "isDaytime": true,
+                                        "name": "Saturday",
+                                        "number": 5,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 74
+                                        },
+                                        "shortForecast": "Sunny",
+                                        "startTime": "2024-03-30T06:00:00-04:00",
+                                        "temperature": 75,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "SW",
+                                        "windSpeed": "5 to 14 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "Mostly clear, with a low around 54.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 8.88888888888889
+                                        },
+                                        "endTime": "2024-03-31T06:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                                        "isDaytime": false,
+                                        "name": "Saturday Night",
+                                        "number": 6,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 69
+                                        },
+                                        "shortForecast": "Mostly Clear",
+                                        "startTime": "2024-03-30T18:00:00-04:00",
+                                        "temperature": 54,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "SW",
+                                        "windSpeed": "9 to 13 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "Mostly sunny, with a high near 81.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 13.333333333333334
+                                        },
+                                        "endTime": "2024-03-31T18:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+                                        "isDaytime": true,
+                                        "name": "Sunday",
+                                        "number": 7,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 77
+                                        },
+                                        "shortForecast": "Mostly Sunny",
+                                        "startTime": "2024-03-31T06:00:00-04:00",
+                                        "temperature": 81,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "W",
+                                        "windSpeed": "10 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "Mostly cloudy, with a low around 60.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 13.88888888888889
+                                        },
+                                        "endTime": "2024-04-01T06:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/night/bkn?size=medium",
+                                        "isDaytime": false,
+                                        "name": "Sunday Night",
+                                        "number": 8,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 78
+                                        },
+                                        "shortForecast": "Mostly Cloudy",
+                                        "startTime": "2024-03-31T18:00:00-04:00",
+                                        "temperature": 60,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "SW",
+                                        "windSpeed": "8 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "Partly sunny, with a high near 81.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 15
+                                        },
+                                        "endTime": "2024-04-01T18:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+                                        "isDaytime": true,
+                                        "name": "Monday",
+                                        "number": 9,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 81
+                                        },
+                                        "shortForecast": "Partly Sunny",
+                                        "startTime": "2024-04-01T06:00:00-04:00",
+                                        "temperature": 81,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "SW",
+                                        "windSpeed": "7 to 10 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "A slight chance of rain showers after 2am. Mostly cloudy, with a low around 62.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 15
+                                        },
+                                        "endTime": "2024-04-02T06:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/night/bkn/rain_showers?size=medium",
+                                        "isDaytime": false,
+                                        "name": "Monday Night",
+                                        "number": 10,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": null
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 78
+                                        },
+                                        "shortForecast": "Mostly Cloudy then Slight Chance Rain Showers",
+                                        "startTime": "2024-04-01T18:00:00-04:00",
+                                        "temperature": 62,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "S",
+                                        "windSpeed": "9 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "A slight chance of rain showers before 2pm, then a chance of showers and thunderstorms. Mostly cloudy, with a high near 78. Chance of precipitation is 30%.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 15.555555555555555
+                                        },
+                                        "endTime": "2024-04-02T18:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/day/rain_showers/tsra_sct,30?size=medium",
+                                        "isDaytime": true,
+                                        "name": "Tuesday",
+                                        "number": 11,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 30
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 84
+                                        },
+                                        "shortForecast": "Chance Showers And Thunderstorms",
+                                        "startTime": "2024-04-02T06:00:00-04:00",
+                                        "temperature": 78,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "SW",
+                                        "windSpeed": "9 to 15 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "A chance of showers and thunderstorms. Mostly cloudy, with a low around 58. Chance of precipitation is 50%.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 15.555555555555555
+                                        },
+                                        "endTime": "2024-04-03T06:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/night/tsra_sct,50?size=medium",
+                                        "isDaytime": false,
+                                        "name": "Tuesday Night",
+                                        "number": 12,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 50
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 81
+                                        },
+                                        "shortForecast": "Chance Showers And Thunderstorms",
+                                        "startTime": "2024-04-02T18:00:00-04:00",
+                                        "temperature": 58,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "SW",
+                                        "windSpeed": "14 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "A chance of rain showers before 8am, then a chance of showers and thunderstorms. Partly sunny, with a high near 70. Chance of precipitation is 50%.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 11.666666666666666
+                                        },
+                                        "endTime": "2024-04-03T18:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/day/tsra_hi,50/tsra_hi,30?size=medium",
+                                        "isDaytime": true,
+                                        "name": "Wednesday",
+                                        "number": 13,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 50
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 80
+                                        },
+                                        "shortForecast": "Chance Showers And Thunderstorms",
+                                        "startTime": "2024-04-03T06:00:00-04:00",
+                                        "temperature": 70,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "W",
+                                        "windSpeed": "12 to 16 mph"
+                                    },
+                                    {
+                                        "detailedForecast": "A chance of showers and thunderstorms before 8pm. Partly cloudy, with a low around 45. Chance of precipitation is 30%.",
+                                        "dewpoint": {
+                                            "unitCode": "wmoUnit:degC",
+                                            "value": 6.666666666666667
+                                        },
+                                        "endTime": "2024-04-04T06:00:00-04:00",
+                                        "icon": "https://api.weather.gov/icons/land/night/tsra_hi,30/sct?size=medium",
+                                        "isDaytime": false,
+                                        "name": "Wednesday Night",
+                                        "number": 14,
+                                        "probabilityOfPrecipitation": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 30
+                                        },
+                                        "relativeHumidity": {
+                                            "unitCode": "wmoUnit:percent",
+                                            "value": 48
+                                        },
+                                        "shortForecast": "Chance Showers And Thunderstorms then Partly Cloudy",
+                                        "startTime": "2024-04-03T18:00:00-04:00",
+                                        "temperature": 45,
+                                        "temperatureTrend": null,
+                                        "temperatureUnit": "F",
+                                        "windDirection": "W",
+                                        "windSpeed": "16 mph"
+                                    }
+                                ],
+                                "units": "us",
+                                "updateTime": "2024-03-28T14:14:12+00:00",
+                                "updated": "2024-03-28T14:14:12+00:00",
+                                "validTimes": "2024-03-28T08:00:00+00:00/P6DT17H"
+                            },
+                            "type": "Feature"
+                        },
+                        "msg": "OK (17679 bytes)",
+                        "redirected": false,
+                        "server": "nginx/1.20.1",
+                        "status": 200,
+                        "strict_transport_security": "max-age=31536000 ; includeSubDomains ; preload",
+                        "url": "https://api.weather.gov/gridpoints/RAH/69,61/forecast",
+                        "vary": "Accept-Encoding, Accept,Feature-Flags,Accept-Language",
+                        "x_correlation_id": "9284d6f1",
+                        "x_edge_request_id": "1121f13a",
+                        "x_request_id": "5c696e7a-9ee6-4ca8-914a-eae67e13e48e",
+                        "x_server_id": "vm-lnx-nids-apiapp7.ncep.noaa.gov"
+                    },
+                    "resolved_action": "ansible.builtin.uri",
+                    "resolved_role": "weather.demo.run",
+                    "role": "run",
+                    "start": "2024-03-28T16:42:18.447342",
+                    "task": "Retrieve the current forecast",
+                    "task_action": "ansible.builtin.uri",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/collections/ansible_collections/weather/demo/roles/run/tasks/main.yml:29",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000028",
+                    "uuid": "784f2214-ef64-441b-8697-ea0651cf695f"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 8,
+                    "__result": "Ok",
+                    "__task": "Extract the daily forecast",
+                    "__task_action": "ansible.builtin.set_fact",
+                    "duration": 0.018315,
+                    "end": "2024-03-28T16:42:19.065410",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "daily_forecast": "Rain likely before 5pm. Cloudy, with a high near 55. North wind around 13 mph, with gusts as high as 24 mph. Chance of precipitation is 60%. New rainfall amounts between a quarter and half of an inch possible."
+                        },
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.set_fact",
+                    "resolved_role": "weather.demo.run",
+                    "role": "run",
+                    "start": "2024-03-28T16:42:19.047095",
+                    "task": "Extract the daily forecast",
+                    "task_action": "ansible.builtin.set_fact",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/collections/ansible_collections/weather/demo/roles/run/tasks/main.yml:34",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-000000000029",
+                    "uuid": "0bbb8893-590d-4ce0-87ac-b3d4df7f7abe"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 9,
+                    "__result": "Ok",
+                    "__task": "Show the forecast",
+                    "__task_action": "ansible.builtin.debug",
+                    "duration": 0.012354,
+                    "end": "2024-03-28T16:42:19.081516",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Weather forecast",
+                    "play_pattern": "localhost",
+                    "play_uuid": "6c4b905e-be4f-7d28-9344-000000000001",
+                    "playbook": "/home/bthornto/github/weather_demo/site.yml",
+                    "playbook_uuid": "9f4feb6a-49ba-4fbe-9989-613b9cb00ca9",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "_ansible_verbose_always": true,
+                        "changed": false,
+                        "msg": "The forecast for RDU is: Rain likely before 5pm. Cloudy, with a high near 55. North wind around 13 mph, with gusts as high as 24 mph. Chance of precipitation is 60%. New rainfall amounts between a quarter and half of an inch possible."
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "resolved_role": "weather.demo.run",
+                    "role": "run",
+                    "start": "2024-03-28T16:42:19.069162",
+                    "task": "Show the forecast",
+                    "task_action": "ansible.builtin.debug",
+                    "task_args": "",
+                    "task_path": "/home/bthornto/github/weather_demo/collections/ansible_collections/weather/demo/roles/run/tasks/main.yml:40",
+                    "task_uuid": "6c4b905e-be4f-7d28-9344-00000000002a",
+                    "uuid": "5192aaa6-284e-43d6-9749-16d6f2865685"
+                }
+            ],
+            "uuid": "6c4b905e-be4f-7d28-9344-000000000001"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "-e airport_code=RDU",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/bthornto/github/weather_demo/site.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/bthornto/github/weather_demo"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/bthornto/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "/usr/bin/nano {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": false,
+                "image": "ghcr.io/nilashishc/community-ansible-dev-tools-container:latest",
+                "pull": {
+                    "policy": "always"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": false,
+                "file": "/home/bthornto/github/weather_demo/.logs/ansible-navigator.log",
+                "level": "debug"
+            },
+            "mode": "interactive",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "$PWD/.logs/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Previous cli command",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Not set",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Previous cli command",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Previous cli command",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Settings file",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Settings file",
+        "ansible-navigator.logging.file": "Settings file",
+        "ansible-navigator.logging.level": "Settings file",
+        "ansible-navigator.mode": "Defaults",
+        "ansible-navigator.playbook-artifact.enable": "Settings file",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Settings file",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/bthornto/github/weather_demo/ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "\u001b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\u001b[0m",
+        "\u001b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\u001b[0m",
+        "\u001b[1;35mthe implicit localhost does not match 'all'\u001b[0m",
+        "",
+        "PLAY [Weather forecast] ********************************************************",
+        "",
+        "TASK [Ensure the airport code has been defined] ********************************",
+        "\u001b[0;32mok: [localhost] => {\u001b[0m",
+        "\u001b[0;32m    \"changed\": false,\u001b[0m",
+        "\u001b[0;32m    \"msg\": \"All assertions passed\"\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "TASK [Check the weather] *******************************************************",
+        "",
+        "TASK [weather.demo.run : Clone the latitude longtude repo locally] *************",
+        "\u001b[0;33mchanged: [localhost]\u001b[0m",
+        "",
+        "TASK [weather.demo.run : Convert the CSV to structured data] *******************",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [weather.demo.run : Extract the matching airport from the list of all airports] ***",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [weather.demo.run : Retrieve weather information using the latitude and longitude] ***",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [weather.demo.run : Get the URL for the forecast] *************************",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [weather.demo.run : Retrieve the current forecast] ************************",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [weather.demo.run : Extract the daily forecast] ***************************",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [weather.demo.run : Show the forecast] ************************************",
+        "\u001b[0;32mok: [localhost] => {\u001b[0m",
+        "\u001b[0;32m    \"msg\": \"The forecast for RDU is: Rain likely before 5pm. Cloudy, with a high near 55. North wind around 13 mph, with gusts as high as 24 mph. Chance of precipitation is 60%. New rainfall amounts between a quarter and half of an inch possible.\"\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mlocalhost\u001b[0m                  : \u001b[0;32mok=9   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}
